@@ -1,0 +1,66 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const {
+	title = 'VOLT Studio — Make good ideas impossible to ignore',
+	description = 'VOLT is an independent creative studio building distinct brands and digital experiences.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+		<meta name="theme-color" content="#f5f4ee" />
+		<title>{title}</title>
+	</head>
+	<body>
+		<header class="site-header">
+			<a class="brand" href="#home" aria-label="VOLT Studio home">
+				<img src="/volt-mark.png" alt="" width="42" height="42" />
+				<span>VOLT<span class="brand-dot">.</span></span>
+			</a>
+			<nav class="desktop-nav" aria-label="Main navigation">
+				<a href="#home">Hero</a>
+				<a href="#services">Services</a>
+				<a href="#process">Process</a>
+				<a href="#about">About</a>
+				<a href="#projects">Projects</a>
+				<a href="#contact">Contact</a>
+			</nav>
+			<a class="header-cta" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
+			<details class="mobile-nav">
+				<summary>Menu <span aria-hidden="true">+</span></summary>
+				<nav aria-label="Mobile navigation">
+					<a href="#home">Hero</a>
+					<a href="#services">Services</a>
+					<a href="#process">Process</a>
+					<a href="#about">About</a>
+					<a href="#projects">Projects</a>
+					<a href="#contact">Contact</a>
+				</nav>
+			</details>
+		</header>
+
+		<main><slot /></main>
+
+		<footer class="site-footer section-wrap">
+			<a class="brand footer-brand" href="#home" aria-label="VOLT Studio home">
+				<img src="/volt-mark.png" alt="" width="36" height="36" />
+				<span>VOLT<span class="brand-dot">.</span></span>
+			</a>
+			<p>Independent by nature. Creative by choice.</p>
+			<a href="#home">Back to top ↑</a>
+			<span>© {new Date().getFullYear()} VOLT Studio</span>
+		</footer>
+	</body>
+</html>

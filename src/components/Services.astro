@@ -1,0 +1,40 @@
+---
+const services = [
+	{
+		number: '01',
+		title: 'Brand identity',
+		description: 'Strategy, naming, and visual systems that make your brand unmistakable.',
+	},
+	{
+		number: '02',
+		title: 'Digital experiences',
+		description: 'Thoughtful websites and digital products, designed to work beautifully.',
+	},
+	{
+		number: '03',
+		title: 'Campaigns & content',
+		description: 'Clear, characterful creative that gets the right people talking.',
+	},
+];
+---
+
+<section class="services section-wrap section-pad" id="services">
+	<div class="section-heading">
+		<p class="eyebrow">01 / What we do</p>
+		<h2>Good work starts<br />with <span class="serif">good questions.</span></h2>
+		<p class="section-note">
+			From first thought to final detail, we bring the right mix of clarity and
+			creative energy.
+		</p>
+	</div>
+	<div class="service-list">
+		{services.map((service) => (
+			<article class="service-row">
+				<span class="row-number">{service.number}</span>
+				<h3>{service.title}</h3>
+				<p>{service.description}</p>
+				<span class="row-arrow" aria-hidden="true">↗</span>
+			</article>
+		))}
+	</div>
+</section>

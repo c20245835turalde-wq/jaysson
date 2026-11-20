@@ -1,0 +1,44 @@
+---
+import Card from './Card.astro';
+
+const projects = [
+	{
+		number: '01',
+		name: 'Good Goods',
+		type: 'Brand identity · E-commerce',
+		className: 'goods',
+		graphicLines: ['GOOD', 'GOODS'],
+		descriptor: 'Better things, made better.',
+	},
+	{
+		number: '02',
+		name: 'Fieldnotes',
+		type: 'Digital experience · Art direction',
+		className: 'fieldnotes',
+		graphicLines: ['FIELD', 'NOTES'],
+		descriptor: 'A little closer to outside.',
+	},
+	{
+		number: '03',
+		name: 'Off Hours',
+		type: 'Strategy · Campaign',
+		className: 'offhours',
+		graphicLines: ['OFF', 'HOURS'],
+		descriptor: 'Make room for your own time.',
+	},
+];
+---
+
+<section class="projects section-wrap section-pad" id="projects">
+	<div class="projects-heading">
+		<div>
+			<p class="eyebrow">04 / Selected projects</p>
+			<h2>Made with <span class="serif">intention.</span></h2>
+		</div>
+		<p>A few ideas, brought to life with good people.</p>
+	</div>
+	<div class="project-grid">
+		{projects.map((project) => <Card project={project} />)}
+	</div>
+	<p class="work-note">Project visuals shown as creative studies. Your next story could be here.</p>
+</section>

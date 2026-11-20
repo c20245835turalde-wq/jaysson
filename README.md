@@ -26,5 +26,7 @@ npm run build
 npm run preview
 ```
 
-The homepage lives in `src/pages/index.astro`. Public assets, including the
-provided logo mark, are in `public/`.
+The homepage lives in `src/pages/index.astro` and composes Astro components from
+`src/components/`. The page shell is in `src/layouts/layout.astro`, and shared
+styles are in `src/styles/global.css`. Public assets, including the provided
+logo mark, are in `public/`.

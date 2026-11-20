@@ -1,0 +1,43 @@
+---
+const steps = [
+	{
+		number: '01',
+		title: 'Listen',
+		description: 'We get to know your goals, your audience, and what makes you different.',
+	},
+	{
+		number: '02',
+		title: 'Find the spark',
+		description: 'We turn the big questions into a clear strategy and a shared direction.',
+	},
+	{
+		number: '03',
+		title: 'Make it real',
+		description: 'We build, refine, and launch work made to keep making an impact.',
+	},
+];
+---
+
+<section class="process section-wrap section-pad" id="process">
+	<div class="process-head">
+		<div>
+			<p class="eyebrow">02 / How we work</p>
+			<h2>Clear thinking.<br /><span class="serif">Good momentum.</span></h2>
+		</div>
+		<p>
+			No mystery process. Just good people, open collaboration, and a clear path
+			from the first hello to the final handoff.
+		</p>
+	</div>
+	<div class="steps">
+		{steps.map((step) => (
+			<article class="step">
+				<span class="step-number">{step.number}</span>
+				<div class="step-mark" aria-hidden="true">↗</div>
+				<h3>{step.title}</h3>
+				<p>{step.description}</p>
+			</article>
+		))}
+	</div>
+	<div class="process-foot"><span>Curious minds welcome</span><span>Built together, every step</span></div>
+</section>

@@ -1,0 +1,29 @@
+---
+interface Props {
+	project: {
+		number: string;
+		name: string;
+		type: string;
+		className: string;
+		graphicLines: string[];
+		descriptor: string;
+	};
+}
+
+const { project } = Astro.props;
+---
+
+<article class="project-card">
+	<div class:list={['project-art', project.className]}>
+		<div class="project-art-top"><span>VOLT®</span><span>{project.number} / 03</span></div>
+		<p class="project-graphic">
+			{project.graphicLines.map((line) => <span>{line}</span>)}
+		</p>
+		<span class="project-descriptor">{project.descriptor}</span>
+		<span class="project-art-arrow" aria-hidden="true">↗</span>
+	</div>
+	<div class="project-info">
+		<div><h3>{project.name}</h3><p>{project.type}</p></div>
+		<span aria-hidden="true">↗</span>
+	</div>
+</article>
